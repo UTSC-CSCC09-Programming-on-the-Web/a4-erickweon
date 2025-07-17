@@ -1,0 +1,118 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #3c3d3f;
+  position: relative;
+  width: 600px;
+  height: 600px;
+}
+
+/* todo - scale images to fit div */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.image-info {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  font-size: 14px;
+}
+
+.image-info * {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+.info-gap {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.add-picture-icon {
+  width: 40px;
+  height: 40px;
+  background-image: url("/media/add.png");
+}
+
+.next-icon {
+  position: absolute;
+  right: 1%;
+  top: auto;
+  bottom: auto;
+  background-image: url("/media/arrow-right.png");
+}
+
+.prev-icon {
+  position: absolute;
+  left: 1%;
+  top: auto;
+  bottom: auto;
+  background-image: url("/media/left.png");
+}
+
+.delete-icon {
+  position: absolute;
+  right: 1%;
+  bottom: 1%;
+  background-image: url("/media/delete.png");
+}
+
+#imageCount {
+  text-align: center;
+  width: auto;
+  font-size: 15px;
+  color: #3c3d3f;
+}
+
+/* Override icon size */
+.next-icon,
+.prev-icon,
+.delete-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Basic animations */
+.image-container .next-icon,
+.image-container .prev-icon,
+.image-container .delete-icon {
+  opacity: 0.05;
+  pointer-events: none;
+  transition: opacity 0.1s;
+}
+
+.image-container:hover .next-icon,
+.image-container:hover .prev-icon,
+.image-container:hover .delete-icon {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.4s;
+}
+
+@media (max-width: 680px) {
+  .image-container {
+    height: 516px;
+    width: 516px;
+  }
+}

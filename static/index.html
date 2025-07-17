@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Web Gallery</title>
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="styles/gallery.css" rel="stylesheet" type="text/css" />
+    <link href="styles/comments.css" rel="stylesheet" type="text/css" />
+    <link href="styles/form.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <a href="/" id="title">Web Gallery</a>
+        <div class="header-btns">
+          <button
+            id="addImage"
+            class="icon-container add-picture-icon"
+          ></button>
+          <a href="/authenticate.html" class="btn">Authenticate</a>
+          <button id="logout" class="btn">Log out</button>
+        </div>
+      </div>
+      <div id="userGallerySelector" class="user-gallery-selector">
+        <div class="user-gallery-header">
+          <h3>Select Gallery:</h3>
+          <button id="allUsersBtn" class="btn active">All Users</button>
+          <div id="userButtons" class="user-buttons"></div>
+        </div>
+      </div>
+    </header>
+    <form id="addPictureForm" class="complex-form hidden"></form>
+    <div class="main-view">
+      <div class="gallery">
+        <div class="image-container">
+          <div class="image"></div>
+          <button id="prevImg" class="icon-container prev-icon"></button>
+          <button id="nextImg" class="icon-container next-icon"></button>
+          <button id="delImg" class="icon-container delete-icon"></button>
+        </div>
+        <div class="image-info">
+          <div class="info-gap">
+            <h2 id="imageTitle"></h2>
+            <p id="imageAuthor"></p>
+          </div>
+          <p id="imageCount"></p>
+        </div>
+      </div>
+      <div class="comments-container">
+        <div class="comments-list"></div>
+        <form id="addCommentForm" class="complex-form hidden"></form>
+        <button
+          id="addCommentBtn"
+          class="icon-container add-comment-icon"
+        ></button>
+      </div>
+    </div>
+    <footer>
+      <a href="/credits.html">credits</a>
+    </footer>
+    <script src="js/meact.js"></script>
+    <script src="js/api-service.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

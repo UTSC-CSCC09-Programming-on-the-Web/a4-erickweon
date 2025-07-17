@@ -1,0 +1,80 @@
+.complex-form {
+  margin-top: 0;
+  border-radius: 10px;
+  border: 1px #3c3d3f solid;
+  padding: 10px 10px 10px 10px;
+  margin: 0 auto 33px auto;
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+}
+
+.complex-form .picture-element {
+  margin-bottom: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid #3c3d3f;
+  resize: none;
+}
+
+.complex-form .comment-element {
+  resize: none;
+  margin-bottom: 1px;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 3px;
+  border: 1px solid #3c3d3f;
+  resize: none;
+}
+
+.complex-form .authentication-element {
+  resize: none;
+  margin-bottom: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid #3c3d3f;
+}
+
+#addCommentForm.complex-form {
+  margin: 0 auto 9% auto;
+}
+
+.btn {
+  display: inline-flex;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #3c3d3f;
+  background: transparent;
+  border: 1px solid #3c3d3f;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: normal;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment-btn {
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #3c3d3f;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.auth-btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  gap: 5px;
+}
