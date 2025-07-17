@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  webgallery:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes:
+      # Mount uploads directory to persist user uploads
+      - ./uploads:/app/uploads
+      # Mount database to persist data
+      - ./microblog.sqlite:/app/microblog.sqlite
+    restart: unless-stopped

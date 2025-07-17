@@ -7,7 +7,10 @@ import { usersRouter } from "./routers/users_router.js";
 import { authenticate } from "./middleware/auth.js";
 
 export const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
+// Trust the reverse proxy (nginx) for HTTPS
+app.set('trust proxy', 1);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -35,5 +38,5 @@ try {
 
 app.listen(PORT, (err) => {
   if (err) console.log(err);
-  else console.log("HTTP server on http://localhost:%s", PORT);
+  else console.log("HTTP server running on port %s", PORT);
 });
